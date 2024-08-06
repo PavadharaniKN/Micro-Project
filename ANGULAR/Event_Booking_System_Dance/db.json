@@ -1,0 +1,55 @@
+{
+  "customer": [
+    {
+      "id": "dhee26@gmail.com",
+      "customerName": "Dhee",
+      "customerContact": "2356897412",
+      "customerAddress": "122/1 Govinda Goundar Thottam peramanur"
+    },
+    {
+      "id": "pava123@gmail.com",
+      "customerName": "pava",
+      "customerContact": "8667855794",
+      "customerAddress": "122/1 Govinda Goundar Thottam peramanur",
+      "FunctionDate": "2024-08-05",
+      "customerTiming": "16:19"
+    },
+    {
+      "id": "dhee@123",
+      "customerName": "dheetchana",
+      "customerContact": "21564565",
+      "customerAddress": "dsvc"
+    },
+    {
+      "id": "pava123@gmail.com",
+      "customerName": "pava",
+      "customerContact": "789456123",
+      "customerAddress": "122/1 Govinda Goundar Thottam peramanur",
+      "customerTiming": "15:51"
+    },
+    {
+      "id": "sumathi@123",
+      "customerName": "sumathiNargunaraj",
+      "customerContact": "8667855794",
+      "customerAddress": "122/1 Govinda Goundar Thottam peramanur",
+      "FunctionDate": "2024-08-05",
+      "customerTiming": "16:12"
+    },
+    {
+      "id": "sumathi@123",
+      "customerName": "sumathiNargunaraj",
+      "customerContact": "8667855794",
+      "customerAddress": "122/1 Govinda Goundar Thottam peramanur",
+      "FunctionDate": "2024-08-05",
+      "customerTiming": "16:03"
+    },
+    {
+      "id": "suve123@gmail.com",
+      "customerName": "sumathiNargunaraj",
+      "customerContact": "8667855794",
+      "customerAddress": "122/1 Govinda Goundar Thottam peramanur",
+      "FunctionDate": "2024-08-06",
+      "customerTiming": "07:34"
+    }
+  ]
+}

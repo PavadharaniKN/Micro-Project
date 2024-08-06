@@ -1,0 +1,153 @@
+<body>
+
+<div class="heading">
+    <br>
+  <h1>LITE FOOTERS DANCE CREW</h1>
+</div>
+<div class="qoutes">
+  <div class="container">
+ 
+      <div class="content">
+       <h2 >To join with Us</h2>
+       <form #myForm="ngForm">
+         <div class="form-group">
+           <label for="customer Name">
+              Your Name :
+            </label>
+             <input id ="Tbox1" type="text" class="form-control" name="customerName" #customerName="ngModel" ngModel required pattern="[A-Za-z]+"/>
+          </div>
+           <div *ngIf="customerName.touched">
+              <div *ngIf="customerName.errors?.['required']">
+              <b style="color:red">customer Name Required.</b>
+              </div>
+              <div *ngIf="customerName.errors?.['pattern']">
+              <b style="color:red">Invalid customer Name.</b>
+              </div>
+            </div>
+            <br><br>
+         <div class="form-group">
+            <label for="customerEmail">
+              Your Email :
+            </label>
+            <input id ="Tbox1" type="email" class="form-control" 
+             name="customerEmail" 
+             #customerEmail="ngModel" ngModel
+              required
+              pattern="^(?:(?!.*?[.]{2})[a-zA-Z0-9](?:[a-zA-Z0-9.+!%-]{1,64}|)|\[a-zA-Z0-9.+!% -]{1,64}\)@[a-zA-Z0-9][a-zA-Z0-9.-]+(.[a-z]{2,}|.[0-9]{1,})$"
+              />
+         </div>
+          <div *ngIf="customerEmail.touched">
+            <div *ngIf="customerEmail.errors?.['required']">
+             <b style="color:red">customer Email Required.</b>
+            </div>
+            <div *ngIf="customerEmail.errors?.['pattern']">
+             <b style="color:red">Invalid Email Name.</b>
+            </div>
+          </div>
+             <br><br>
+          <div class="form-group">
+             <label for="customerContact">
+                Your Contact :
+             </label>
+                <input id ="Tbox2" type="tel" class="form-control" 
+                 name="customerContact" 
+                #customerContact="ngModel" ngModel
+                required
+              />
+           </div>
+           <div *ngIf="customerContact.touched">
+             <div *ngIf="customerContact.errors?.['required']">
+                <b style="color:red">customer Contact Required.</b>
+             </div>
+                <div *ngIf="customerContact.errors?.['pattern']">
+                <b style="color:red">Invalid customer Contact.</b>
+                 </div>
+              </div>
+           <br><br>
+
+           <div class="form-group">
+            <label for="functionType">Select Your Function:</label>
+            <select id="Tbox3" class="form-control" name="functionType" ngModel>
+              <option>Marriage</option>
+              <option>Birthday Party</option>
+              <option>Surprise Party</option>
+              <option>DJ Time</option>
+              <option>Office Party</option>
+            </select>
+          </div>
+          <br /><br />
+          <div class="form-group">
+            <label for="customerAddress">Address:</label>
+            <input id="Tbox4" type="text" class="form-control" name="customerAddress" #customerAddress="ngModel" ngModel required />
+          </div>
+          <div *ngIf="customerAddress.touched">
+            <div *ngIf="customerAddress.errors?.['required']">
+              <b style="color: red">Customer Address Required.</b>
+            </div>
+          </div>
+<br><br>
+Select Your Function Date:<input id="Tbox5" type="date" class="form-control" 
+name="FunctionDate" 
+#FunctionDate="ngModel" ngModel
+required
+pattern="[0-9]+"
+/>
+                               <div *ngIf="FunctionDate.touched">
+                                  <div *ngIf="FunctionDate.errors?.['required']">
+                                        <b style="color:red">customer Function Date details Required.</b>
+                                    </div>
+                                </div>
+                                   <br><br>
+                                  Timing:<input id="Tbox6" type="time" class="form-control" 
+                                  name="customerTiming" 
+                                  #customerTiming="ngModel" ngModel
+                                  required
+                                  pattern="[0-9]+"
+                                  />
+                                 <div *ngIf="customerTiming.touched">
+                                    <div *ngIf="customerTiming.errors?.['required']">
+                                      <b style="color:red">customer Function Timing details Required.</b>
+                                     </div>
+                                 </div>
+                                      <br><br>
+
+                                        <button class="btn" type="button" >Book Now</button>
+
+</form>
+</div>
+
+
+
+
+<br><br>
+<div class="btn2">
+<button id="btnstyle"(click)="insertCustomer(myForm.value)">INSERT</button>&nbsp;&nbsp;
+<button id="btnstyle"(click)="updateCustomer(myForm.value)">UPDATE</button>&nbsp;&nbsp;
+<button id="btnstyle"(click)="deleteCustomer(myForm.value)">DELETE</button>&nbsp;&nbsp;
+<button id="btnstyle"(click)="findCustomer(myForm.value)">FIND</button>&nbsp;&nbsp;
+<button id="btnstyle" (click)="findAllCustomer()">FINDALL</button>&nbsp;&nbsp;
+</div>
+</div>
+
+<br><br>
+  <div class="empty">
+    <h1><i>“Memory is the diary that we all carry about with us.”<br>
+      Make some Memories!</i></h1>
+  </div>
+</div>
+<br>
+<h3>{{ result }} </h3>
+<br><br>
+<div style="width: 100%;" *ngIf="flag">
+    <table width="80%" align="center" class="table table-borderd">
+     <tr><th>Customer Email</th><th>Customer Name</th><th>Customer Contact</th><th>Customer Address</th><th>Function Date</th><th>Function Timing</th></tr> 
+      <tr *ngFor="let cus of customerArray">
+          <td> {{cus.id}} </td><td> {{cus.customerName}} </td><td>{{cus.customerContact}}</td><td>{{cus.customerAddress}}</td><td>{{cus.FunctionDate}}</td><td>{{cus.customerTiming}}</td>
+      </tr>
+   </table>
+   </div>
+
+  
+
+  
+</body>
